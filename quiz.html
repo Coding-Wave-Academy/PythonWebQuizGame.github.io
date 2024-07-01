@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Screen</title>
+</head>
+<body onload="startTimer()"> 
+    <audio  autoplay  >
+        <source  src="./imgs/yt1s.com - Quiz Background Music 6 Arcade Style No Copyright (1).mp3" type="audio/mpeg">
+    </audio> 
+
+<style>
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: 0;
+    list-style-type: none;
+   color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body
+{
+    background: #3c32a3;
+    overflow: hidden;
+    
+}
+.container
+{
+   text-align: center;
+   padding: 10px 30px;
+   display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+.time-hero
+{
+/* */
+display: flex;
+justify-content: space-between;
+padding: 0px;
+
+}
+.counter
+{
+    display: flex;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+}
+.timer
+{
+    font-weight: bold;
+}
+#track
+{
+    display: flex;
+    gap: 6px;
+    font-weight: 600;
+}
+.question
+
+{
+   font-size: 1.7em;
+   font-weight: bold;
+   margin-top: 20%;
+   margin-bottom: 5%;
+}
+
+.option
+{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+button
+{
+    background-color: rgb(66, 211, 216);
+    color: #fff;
+    width: 100%;
+    padding: 15px 5px;
+    border: 0;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+button:hover
+{
+    box-shadow: 0 5px 25px rgb(66, 211, 216);
+    /* background-color: rgba(87, 106, 123, 0.708);
+    opacity: .8; */
+}
+
+.next-btn
+{
+    background-color: #fff;
+    color: #825ef6;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 4px;
+    margin-top: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color .3s ease-in-out;
+    box-shadow: 3px 5px 2px #42d3d8;
+}
+.next-btn:hover
+{
+    background-color: aliceblue;
+    opacity: .8;
+}
+.next-btn a
+{
+    color: #825ef6;
+}
+#score {
+  font-size: 20px;
+  
+}
+
+#scoreValue {
+  font-weight: bold;
+  font-size: 4.5em;
+  color: #42d3d8;
+  position: relative;
+  margin-right:15px;
+  right: 20px;
+  
+}
+#totalQ 
+{
+    font-weight: bold;
+  font-size: 2.5em;
+  position: relative;
+  margin: 0px 10px;
+  top: -40px;
+  left: 80px;
+  
+}
+.close
+{
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+   
+}
+ 
+
+
+
+</style>
+
+<div class="container" id="container">
+        <div class="time-hero">
+            <div id="track" style="color: #42d3d8;"></div>
+           <div class="counter">
+            <p style="font-size:20px">&#8987;</p>
+            <p class="timer" id="timer" onload="startTimer()">00:00</p>
+            
+           </div>
+        
+        </div>
+        <p class="question" id="question">Lorem ipsum dolor sit amet consectetur.</p>
+
+        <div class="option" id="option">
+            <!-- Various Options for the Questions Goes Here -->
+        </div>
+        <div id="score"><span style="display: none;" id="scoreValue">0</span></div>
+        <p id="totalQ" style="display: none;"> / 130</p>
+        
+    <button class="next-btn" id="next-btn" style="display: none;">Next</button>
+    <button class="next-btn" id="restart-btn" style="display:none;">
+        <a href="./quiz.html">Restart</a>
+    </button>
+    </div>
+    <center><p class="close" style="display: none;">powered by The Codingwave Academy</p></center>
+   </body>
+<script src="./app.js"></script>
+</html>
+
